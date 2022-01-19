@@ -1,0 +1,15 @@
+---
+#CustomJoFt (Custom Join Left Message) Settings
+
+#Usage {name} to show player Name!
+#Usage {rank} to show player Rank!
+
+#Join Message
+join-message: "§f[§a+§f] §a{name}"
+  
+#Left Message
+left-message: "§f[§c-§f] §c{name}"
+  
+#Thanks For Using This Plugin:)
+#Don't Forget To Subscribe "AxelFeL" On Youtube!
+...
