@@ -34,6 +34,6 @@ class Main extends PluginBase implements Listener {
         $player = $event->getPlayer();
         $name = $player->getName();
         $rank = $this->getServer()->getPluginManager()->getPlugin("PurePerms")->getUserDataMgr()->getGroup($player)->getName();
-        $event->setQuitMessage(str_replace(["{name}", "{rank}"], [$player, $rank], $this->getConfig()->get("left-message")));
+        $event->setQuitMessage(str_replace(["{name}", "{rank}"], [$name, $rank], $this->getConfig()->get("left-message")));
     }
 }
