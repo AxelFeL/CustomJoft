@@ -23,7 +23,6 @@ class Main extends PluginBase implements Listener {
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
         $this->getServer()->getLogger("Plugin CustomJoFt Enabled By AxelFeL!");
         $this->saveResource("config.yml");
-        $this->config = new Config($this->getDataFolder() . "config.yml", Config::YAML);
     }
     
     public function onJoin(PlayerJoinEvent $event){
