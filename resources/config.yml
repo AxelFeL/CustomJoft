@@ -2,7 +2,6 @@
 #CustomJoFt (Custom Join Left Message) Settings
 
 #Usage {name} to show player Name!
-#Usage {rank} to show player Rank!
 
 #Join Message
 join-message: "§f[§a+§f] §a{name}"
