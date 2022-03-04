@@ -2,5 +2,5 @@ name: CustomJoFt
 api: 4.0.0
 main: AxelFeL\CustomJoft\Main
 author: AxelFeL
-version: 1
+version: 1.0
 description: Customize Join & Quit Message
