@@ -10,7 +10,8 @@ use pocketmine\plugin\PluginBase;
 
 use pocketmine\utils\Config;
 
-use _64FF00\PureChat\PureChat;
+use _64FF00\PurePerms\PurePerms;
+use _64FF00\PurePerms\DataManager\UserDataManager;
 
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerJoinEvent;
@@ -28,10 +29,10 @@ class Main extends PluginBase implements Listener {
     public function onJoin(PlayerJoinEvent $event){
         $player = $event->getPlayer();
         $name = $player->getName();
-        if (!class_exists(PureChat::class)){
+        if (!class_exists(PurePerms::class)){
             $rank = "";
         } else {
-            $rank = $this->getServer()->getPluginManager()->getPlugin("PurePerms")->getUserDataMgr()->getGroup($player)->getName();
+            $rank = UserDataManager::getGroup($player)->getName();
         }
         $event->setJoinMessage(str_replace(["{name}", "{rank}"], [$name, $rank], $this->getConfig()->get("join-message")));
     }
@@ -39,10 +40,10 @@ class Main extends PluginBase implements Listener {
     public function onQuit(PlayerQuitEvent $event){
         $player = $event->getPlayer();
         $name = $player->getName();
-        if (!class_exists(PureChat::class)){
+        if (!class_exists(PurePerms::class)){
             $rank = "";
         } else {
-            $rank = $this->getServer()->getPluginManager()->getPlugin("PurePerms")->getUserDataMgr()->getGroup($player)->getName();
+            $rank = UserDataManager::getGroup($player)->getName();
         }
         $event->setQuitMessage(str_replace(["{name}", "{rank}"], [$name, $rank], $this->getConfig()->get("left-message")));
     }
