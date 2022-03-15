@@ -30,7 +30,7 @@ class Main extends PluginBase implements Listener {
     public function onJoin(PlayerJoinEvent $event){
         $player = $event->getPlayer();
         $name = $player->getName();
-        if (!class_exists(UserDataManger::class)){
+        if (!class_exists(UserDataManager::class)){
             $rank = "";
         } else {
             $rank = UserDataManager::getGroup($player)->getName();
