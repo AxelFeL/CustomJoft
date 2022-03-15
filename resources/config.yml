@@ -1,14 +1,19 @@
 ---
 #CustomJoFt (Custom Join Left Message) Settings
-
 #Usage {name} to show player Name!
 
-#Join Message
+#Join Message, Set To False To Disable
 join-message: "§f[§a+§f] §a{name}"
-  
-#Left Message
+
+#Join Title, Set To False To Disable
+join-title: "§l§eWelcome {name}!"
+
+#Join SubTitle, Set To False To Disable
+join-subtitle: false
+
+#Left Message, Set To False To Disable
 left-message: "§f[§c-§f] §c{name}"
   
-#Thanks For Using This Plugin:)
-#Don't Forget To Subscribe "AxelFeL" On Youtube!
+#Guardian Effect, Set To False To Disable
+guardian-effect: true
 ...
