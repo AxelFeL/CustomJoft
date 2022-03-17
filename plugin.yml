@@ -1,6 +1,7 @@
 name: CustomJoFt
 api: 4.0.0
 main: AxelFeL\CustomJoft\Main
-authors: [AxelFeL, RevandMika]
+authors: [AxelFeL, RevandDev]
 version: 1.1
+softdepend: ["GroupsAPI", "PurePerms"]
 description: Customize Join & Quit Message
