@@ -4,8 +4,9 @@ Customize Join &amp; Left Message
 # Feature
 * Simple Configuration 
 * Elder Guardian Join Effect
-* Title & Subtitle
+* Title & Subtitle (Bug)
+* GroupsAPI & PurePerms Support
 
 # Todo
-* Make Other Group/Rank Plugin Support
+* Fixing Title & Subtitle
 * Join Firework Feature
