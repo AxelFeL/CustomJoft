@@ -91,7 +91,7 @@ class Main extends PluginBase implements Listener {
                 }
             }
         } else { //default rank plugin is PurePerms
-            if (!class_exists(UserDataManger::class)){
+            if (!class_exists(UserDataManager::class)){
                 $rank = $this->getConfig()->get("default-rank-name");
             } else {
                 $rank = UserDataManager::getGroup($player)->getName();
