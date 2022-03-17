@@ -16,4 +16,10 @@ left-message: "§f[§c-§f] §c{name}"
   
 #Guardian Effect, Set To False To Disable
 guardian-effect: true
+
+#Rank Plugin, Support : PurePerms (default), GroupsAPI
+rank-plugin: "GroupsAPI"
+
+#Default Rank Name
+default-rank-name: "Member"
 ...
