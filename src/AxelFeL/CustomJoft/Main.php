@@ -63,6 +63,8 @@ class Main extends PluginBase implements Listener {
             $pk = LevelEventPacket::create(LevelEvent::GUARDIAN_CURSE, 1, $player->getPosition());	
             $player->getNetworkSession()->sendDataPacket($pk);
         }
+	}
+	public function onLogin(PlayerLoginEvent){
         if($this->getConfig()->get("join-title") !== false){
             $player->sendTitle(str_replace("{name}", $name, $this->getConfig()->get("join-title")));
         }
