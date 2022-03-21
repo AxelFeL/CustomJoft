@@ -62,9 +62,10 @@ class Main extends PluginBase implements Listener {
         if($this->getConfig()->get("guardian-effect") !== false){
             $pk = LevelEventPacket::create(LevelEvent::GUARDIAN_CURSE, 1, $player->getPosition());	
             $player->getNetworkSession()->sendDataPacket($pk);
-        }
-	}
-	public function onLogin(PlayerLoginEvent $event){
+        } 
+    }
+	
+    public function onLogin(PlayerLoginEvent $event){
         $player = $event->getPlayer();
         if($this->getConfig()->get("join-title") !== false){
             $player->sendTitle(str_replace("{name}", $name, $this->getConfig()->get("join-title")));
@@ -85,10 +86,10 @@ class Main extends PluginBase implements Listener {
                 if($member === null){
                     $rank = $this->getConfig()->get("default-rank-name");
                 } else{
-	                $group = $member->getHighestGroup();
-	                if($group === null){
+	            $group = $member->getHighestGroup();
+	            if($group === null){
                         $rank = $this->getConfig()->get("default-rank-name");
-		            } else {
+		    } else {
                         $rank = $group->getName();
                     }
                 }
