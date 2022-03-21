@@ -65,7 +65,7 @@ class Main extends PluginBase implements Listener {
         }
 	}
 	public function onLogin(PlayerLoginEvent $event){
-        $player = $event->getPlayer()!
+        $player = $event->getPlayer();
         if($this->getConfig()->get("join-title") !== false){
             $player->sendTitle(str_replace("{name}", $name, $this->getConfig()->get("join-title")));
         }
