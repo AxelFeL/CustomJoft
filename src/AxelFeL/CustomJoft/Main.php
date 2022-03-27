@@ -8,6 +8,11 @@ use pocketmine\player\Player;
 use pocketmine\plugin\Plugin;
 use pocketmine\plugin\PluginBase;
 
+use AxelFeL\CustomJoft\Firework\entity\FireworksRocket;
+use AxelFeL\CustomJoft\Firework\item\Fireworks;
+
+use pocketmine\item\{ItemIds, Item, ItemFactory};
+
 use pocketmine\utils\Config;
 
 use pocketmine\network\mcpe\protocol\LevelEventPacket;
@@ -42,10 +47,10 @@ class Main extends PluginBase implements Listener {
                 if($member === null){
                     $rank = $this->getConfig()->get("default-rank-name");
                 } else{
-	                $group = $member->getHighestGroup();
-	                if($group === null){
+	            $group = $member->getHighestGroup();
+	            if($group === null){
                         $rank = $this->getConfig()->get("default-rank-name");
-		            } else {
+		    } else {
                         $rank = $group->getName();
                     }
                 }
@@ -64,6 +69,13 @@ class Main extends PluginBase implements Listener {
             $pk = LevelEventPacket::create(LevelEvent::GUARDIAN_CURSE, 1, $player->getPosition());	
             $player->getNetworkSession()->sendDataPacket($pk);
         } 
+        if($this->getConfig()->get("join-firework) !== false){
+           $location = $this->player->getLocation();
+           $fw = ItemFactory::getInstance()->get(ItemIds::FIREWORKS);
+           $fw->addExplosion(Fireworks::TYPE_CREEPER_HEAD, Fireworks::COLOR_GREEN, "", false, false);
+           $fw->setFlightDuration(2);
+           $entity = new FireworksRocket($location, $fw);
+           $entity->spawnToAll();
     }
 	
     public function onLogin(PlayerLoginEvent $event){
