@@ -8,8 +8,9 @@ use pocketmine\player\Player;
 use pocketmine\plugin\Plugin;
 use pocketmine\plugin\PluginBase;
 
-use AxelFeL\CustomJoft\Firework\entity\FireworksRocket;
-use AxelFeL\CustomJoft\Firework\item\Fireworks;
+use BlockHorizons\Fireworks\entity\FireworksRocket;
+use BlockHorizons\Fireworks\item\Fireworks;
+
 
 use pocketmine\item\{ItemIds, Item, ItemFactory};
 
@@ -69,7 +70,7 @@ class Main extends PluginBase implements Listener {
             $pk = LevelEventPacket::create(LevelEvent::GUARDIAN_CURSE, 1, $player->getPosition());	
             $player->getNetworkSession()->sendDataPacket($pk);
         } 
-        if($this->getConfig()->get("join-firework") !== false){
+        if($this->getConfig()->get("join-firework") !== false && class_exist(Fireworks::class){
            $location = $player->getLocation();
            $fw = ItemFactory::getInstance()->get(ItemIds::FIREWORKS);
            $fw->addExplosion(Fireworks::TYPE_CREEPER_HEAD, Fireworks::COLOR_GREEN, "", false, false);
