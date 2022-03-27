@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace BlockHorizons\Fireworks\item;
+namespace AxelFeL\CustomJoft\Firework\item;
 
-use BlockHorizons\Fireworks\entity\FireworksRocket;
+use AxelFeL\CustomJoft\Firework\entity\FireworksRocket;
 use pocketmine\block\Block;
 use pocketmine\entity\Location;
 use pocketmine\item\Item;
