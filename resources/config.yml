@@ -1,28 +1,31 @@
 ---
-#CustomJoFt (Custom Join Left Message) Settings
-#Usage {name} to show player Name!
+# CustomJoFt (Custom Join Left Message) Settings
+# Usage {name} to show player Name!
 
-#Join Message, Set To False To Disable
+# Join Message, Set To False To Disable
 join-message: "§f[§a+§f] §a{name}"
 
-#Join Title, Set To False To Disable
+# Join Title, Set To False To Disable
 join-title: "§l§eWelcome {name}!"
 
-#Join SubTitle, Set To False To Disable
+# Join SubTitle, Set To False To Disable
 join-subtitle: false
 
-#Left Message, Set To False To Disable
+# Left Message, Set To False To Disable
 left-message: "§f[§c-§f] §c{name}"
   
-#Guardian Effect, Set To False To Disable
+# Guardian Effect, Set To False To Disable
 guardian-effect: true
 
-#Rank Plugin, Support : PurePerms (default), GroupsAPI
+# Rank Plugin, Support : PurePerms (default), GroupsAPI
 rank-plugin: "GroupsAPI"
 
-#Default Rank Name
+# Default Rank Name
 default-rank-name: "Member"
 
-#Join Firework
+# Join Firework
 join-firework: true
+
+# Flight Duration
+flight-duration: 2
 ...
