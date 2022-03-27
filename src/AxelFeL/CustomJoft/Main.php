@@ -73,7 +73,7 @@ class Main extends PluginBase implements Listener {
            $location = $this->player->getLocation();
            $fw = ItemFactory::getInstance()->get(ItemIds::FIREWORKS);
            $fw->addExplosion(Fireworks::TYPE_CREEPER_HEAD, Fireworks::COLOR_GREEN, "", false, false);
-           $fw->setFlightDuration(2);
+           $fw->setFlightDuration($this->getConfig()->get("flight-duration"));
            $entity = new FireworksRocket($location, $fw);
            $entity->spawnToAll();
 	}
