@@ -70,7 +70,7 @@ class Main extends PluginBase implements Listener {
             $pk = LevelEventPacket::create(LevelEvent::GUARDIAN_CURSE, 1, $player->getPosition());	
             $player->getNetworkSession()->sendDataPacket($pk);
         } 
-        if($this->getConfig()->get("join-firework") !== false && class_exist(Fireworks::class){
+        if($this->getConfig()->get("join-firework") !== false && class_exist(Fireworks::class)){
            $location = $player->getLocation();
            $fw = ItemFactory::getInstance()->get(ItemIds::FIREWORKS);
            $fw->addExplosion(Fireworks::TYPE_CREEPER_HEAD, Fireworks::COLOR_GREEN, "", false, false);
