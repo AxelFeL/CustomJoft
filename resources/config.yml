@@ -22,4 +22,7 @@ rank-plugin: "GroupsAPI"
 
 #Default Rank Name
 default-rank-name: "Member"
+
+#Join Firework
+join-firework: true
 ...
