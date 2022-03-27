@@ -6,7 +6,8 @@ Customize Join &amp; Left Message
 * Elder Guardian Join Effect
 * Title & Subtitle
 * GroupsAPI & PurePerms Support
+* Join Firework Feature 
 
 # Todo
 * Remove defaults rank config (change with default group by the plugin)
-* Join Firework Feature
+* Join Firework Customize Firework Feature
