@@ -76,6 +76,7 @@ class Main extends PluginBase implements Listener {
            $fw->setFlightDuration(2);
            $entity = new FireworksRocket($location, $fw);
            $entity->spawnToAll();
+	}
     }
 	
     public function onLogin(PlayerLoginEvent $event){
